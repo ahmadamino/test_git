@@ -19,14 +19,14 @@ class _ThreeState extends State<Three> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   child: Icon(
-      //     Icons.add,
-      //     color: Colors.white,
-      //   ),
-      //   backgroundColor: Colors.green,
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.green,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -208,6 +208,7 @@ class _ThreeState extends State<Three> {
                 tal=lap;
               });
             },title: Text('arabic'),
+              controlAffinity: ListTileControlAffinity.leading,
             ),
 
           ],
