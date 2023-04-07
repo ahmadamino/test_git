@@ -14,10 +14,12 @@ class _ThreeState extends State<Three> {
   var country;
   bool syr=false;
   bool tal=false;
+  GlobalKey<ScaffoldState> scaffoldKey =GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -219,6 +221,13 @@ class _ThreeState extends State<Three> {
                 trailing: Text('price 200\$'),
               ),
             ),
+            Center(child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.red),
+              onPressed: (){
+              var snackBar=SnackBar(content: Text('hay how are you'));
+              globalScaffoldKey.currentState!.showSnackBar();
+            },
+              child: Text('show message'),
+            ),)
 
           ],
         ),
