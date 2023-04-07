@@ -222,11 +222,14 @@ class _ThreeState extends State<Three> {
               ),
             ),
             Center(child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.red),
-              onPressed: (){
-              var snackBar=SnackBar(content: Text('hay how are you'));
-              globalScaffoldKey.currentState!.showSnackBar();
-            },
-              child: Text('show message'),
+              onPressed: () {
+              final snackbar=SnackBar(content: Text('Hay How Are You My Teacher MR. Abdul qader'),duration: Duration(seconds: 7),
+              action: SnackBarAction(label: 'undo', onPressed: (){
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              }),);
+              ScaffoldMessenger.of(context).showSnackBar(snackbar);
+
+              }, child: Text('رسالة الترحيب'),
             ),)
 
           ],
