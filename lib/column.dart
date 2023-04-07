@@ -13,19 +13,20 @@ class _ThreeState extends State<Three> {
   bool egy = false;
   var country;
   bool syr=false;
+  bool tal=false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-        backgroundColor: Colors.green,
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   child: Icon(
+      //     Icons.add,
+      //     color: Colors.white,
+      //   ),
+      //   backgroundColor: Colors.green,
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -187,8 +188,9 @@ class _ThreeState extends State<Three> {
               setState(() {
                 country=cal;
               });
-            },title: Text('olabi'),
-              subtitle: Text('aleppo'),
+            },title: Text('abddul qader alnagar'),
+              subtitle: Text('my techer'),
+              secondary: Icon(Icons.handshake),
               activeColor: Colors.green,
               shape: Border.all(color: Colors.black),
             ),
@@ -196,10 +198,16 @@ class _ThreeState extends State<Three> {
               setState(() {
                 country=cal;
               });
-            },title: Text('olabi'),
-              subtitle: Text('aleppo'),
+            },title: Text('amino'),
+              subtitle: Text('student'),
               activeColor: Colors.green,
               shape: Border.all(color: Colors.black),
+            ),
+            SwitchListTile(value: tal, onChanged:(lap){
+              setState(() {
+                tal=lap;
+              });
+            },title: Text('arabic'),
             ),
 
           ],
