@@ -12,9 +12,9 @@ class _ThreeState extends State<Three> {
   bool usa = false;
   bool egy = false;
   var country;
-  bool syr=false;
-  bool tal=false;
-  GlobalKey<ScaffoldState> scaffoldKey =GlobalKey<ScaffoldState>();
+  bool syr = false;
+  bool tal = false;
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,8 @@ class _ThreeState extends State<Three> {
                               size: 40,
                             ),
                             Container(
-                                padding: EdgeInsets.all(10), child: Text('feed')),
+                                padding: EdgeInsets.all(10),
+                                child: Text('feed')),
                             Text('2  - 4'),
                           ],
                         ),
@@ -101,7 +102,8 @@ class _ThreeState extends State<Three> {
                               size: 40,
                             ),
                             Container(
-                                padding: EdgeInsets.all(10), child: Text('feed')),
+                                padding: EdgeInsets.all(10),
+                                child: Text('feed')),
                             Text('2  - 4'),
                           ],
                         ),
@@ -116,7 +118,8 @@ class _ThreeState extends State<Three> {
                               size: 40,
                             ),
                             Container(
-                                padding: EdgeInsets.all(10), child: Text('feed')),
+                                padding: EdgeInsets.all(10),
+                                child: Text('feed')),
                             Text('2  - 4'),
                           ],
                         ),
@@ -177,39 +180,54 @@ class _ThreeState extends State<Three> {
                     egy = bal!;
                   });
                 }),
-            RadioListTile(value: 'cal', groupValue: country, onChanged: (cal){
-              setState(() {
-                country=cal;
-              });
-            },title: Text('olabi'),
+            RadioListTile(
+              value: 'cal',
+              groupValue: country,
+              onChanged: (cal) {
+                setState(() {
+                  country = cal;
+                });
+              },
+              title: Text('olabi'),
               subtitle: Text('aleppo'),
               activeColor: Colors.green,
               shape: Border.all(color: Colors.black),
             ),
-            RadioListTile(value: 'gal', groupValue: country, onChanged: (cal){
-              setState(() {
-                country=cal;
-              });
-            },title: Text('abddul qader alnagar'),
+            RadioListTile(
+              value: 'gal',
+              groupValue: country,
+              onChanged: (cal) {
+                setState(() {
+                  country = cal;
+                });
+              },
+              title: Text('abddul qader alnagar'),
               subtitle: Text('my techer'),
               secondary: Icon(Icons.handshake),
               activeColor: Colors.green,
               shape: Border.all(color: Colors.black),
             ),
-            RadioListTile(value: 'sal', groupValue: country, onChanged: (cal){
-              setState(() {
-                country=cal;
-              });
-            },title: Text('amino'),
+            RadioListTile(
+              value: 'sal',
+              groupValue: country,
+              onChanged: (cal) {
+                setState(() {
+                  country = cal;
+                });
+              },
+              title: Text('amino'),
               subtitle: Text('student'),
               activeColor: Colors.green,
               shape: Border.all(color: Colors.black),
             ),
-            SwitchListTile(value: tal, onChanged:(lap){
-              setState(() {
-                tal=lap;
-              });
-            },title: Text('arabic'),
+            SwitchListTile(
+              value: tal,
+              onChanged: (lap) {
+                setState(() {
+                  tal = lap;
+                });
+              },
+              title: Text('arabic'),
               controlAffinity: ListTileControlAffinity.leading,
             ),
             Container(
@@ -221,17 +239,43 @@ class _ThreeState extends State<Three> {
                 trailing: Text('price 200\$'),
               ),
             ),
-            Center(child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.red),
-              onPressed: () {
-              final snackbar=SnackBar(content: Text('Hay How Are You My Teacher MR. Abdul qader'),duration: Duration(seconds: 7),
-              action: SnackBarAction(label: 'undo', onPressed: (){
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              }),);
-              ScaffoldMessenger.of(context).showSnackBar(snackbar);
+            // snack bar
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: () {
+                  final snackbar = SnackBar(
+                    content: Text('Hay How Are You My Teacher MR. Abdul qader'),
+                    duration: Duration(seconds: 7),
+                    action: SnackBarAction(
+                        label: 'undo',
+                        onPressed: () {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        }),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                },
+                child: Text('رسالة الترحيب'),
+              ),
+            ),
+            Divider(
+              color: Colors.black,
+              thickness: 3,
+            ),
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.red),
+                onPressed: (){
+                  showDialog(context: context, builder: (context)=>AlertDialog(
+                    title: Text('title'),
+                    content:Text ('content contenzf jkschhj'),
+                  ));
 
-              }, child: Text('رسالة الترحيب'),
-            ),)
+                },
+                child: Text('اضغط هنا'),
 
+              ),
+            ),
           ],
         ),
       ),
