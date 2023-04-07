@@ -210,6 +210,15 @@ class _ThreeState extends State<Three> {
             },title: Text('arabic'),
               controlAffinity: ListTileControlAffinity.leading,
             ),
+            Container(
+              color: Colors.grey,
+              child: ListTile(
+                title: Text('s23 ultra'),
+                subtitle: Text('Samsung'),
+                leading: Icon(Icons.flag),
+                trailing: Text('price 200\$'),
+              ),
+            ),
 
           ],
         ),
